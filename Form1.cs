@@ -65,6 +65,7 @@ namespace EasyToInstall
             label3.Visible = true;
             label4.Visible = true;
             label5.Visible = false;
+            label6.Visible = false;
             textBox1.Visible = false;
         }
 
@@ -76,6 +77,7 @@ namespace EasyToInstall
             label3.Visible = false;
             label4.Visible = false;
             label5.Visible = false;
+            label6.Visible = false;
             textBox1.Visible = false;
         }
 
@@ -87,7 +89,20 @@ namespace EasyToInstall
             label3.Visible = false;
             label4.Visible = false;
             label5.Visible = true;
+            label6.Visible = false;
             textBox1.Visible = true;
+        }
+
+        private void 关于AToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = true;
+            textBox1.Visible = false;
         }
     }
 }

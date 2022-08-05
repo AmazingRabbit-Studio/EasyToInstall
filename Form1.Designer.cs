@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.安装IToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             this.button1.AllowDrop = true;
             this.button1.Location = new System.Drawing.Point(0, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(321, 308);
+            this.button1.Size = new System.Drawing.Size(314, 304);
             this.button1.TabIndex = 0;
             this.button1.Text = "点击或拖拽文件来安装";
             this.button1.UseVisualStyleBackColor = true;
@@ -72,28 +74,33 @@
             // 安装IToolStripMenuItem
             // 
             this.安装IToolStripMenuItem.Name = "安装IToolStripMenuItem";
-            this.安装IToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
-            this.安装IToolStripMenuItem.Text = " 安装(I)";
+            this.安装IToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.安装IToolStripMenuItem.Size = new System.Drawing.Size(69, 21);
+            this.安装IToolStripMenuItem.Text = " 安装(F1)";
             this.安装IToolStripMenuItem.Click += new System.EventHandler(this.安装IToolStripMenuItem_Click);
             // 
             // 帮助HToolStripMenuItem
             // 
             this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
-            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
-            this.帮助HToolStripMenuItem.Text = "帮助(H)";
+            this.帮助HToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.帮助HToolStripMenuItem.Text = "帮助(F2)";
             this.帮助HToolStripMenuItem.Click += new System.EventHandler(this.帮助HToolStripMenuItem_Click);
             // 
             // 关于AToolStripMenuItem
             // 
             this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
-            this.关于AToolStripMenuItem.Text = "关于(A)";
+            this.关于AToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.关于AToolStripMenuItem.Text = "关于(F3)";
+            this.关于AToolStripMenuItem.Click += new System.EventHandler(this.关于AToolStripMenuItem_Click);
             // 
             // 高级SToolStripMenuItem
             // 
             this.高级SToolStripMenuItem.Name = "高级SToolStripMenuItem";
-            this.高级SToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.高级SToolStripMenuItem.Text = "高级(S)";
+            this.高级SToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.高级SToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.高级SToolStripMenuItem.Text = "高级(F4)";
             this.高级SToolStripMenuItem.Click += new System.EventHandler(this.高级SToolStripMenuItem_Click);
             // 
             // label1
@@ -139,7 +146,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-2, 21);
+            this.label5.Location = new System.Drawing.Point(-2, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 12);
             this.label5.TabIndex = 6;
@@ -148,12 +155,22 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(0, 34);
+            this.textBox1.Location = new System.Drawing.Point(0, 40);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(314, 21);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "127.0.0.1:58526";
             this.textBox1.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(-2, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 12);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "由ARMrAmzing制作 Github:ARMrAmzing";
+            this.label6.Visible = false;
             // 
             // Form1
             // 
@@ -161,6 +178,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 332);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -169,6 +187,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "一键安装apk";
             this.menuStrip1.ResumeLayout(false);
@@ -192,6 +211,7 @@
         private System.Windows.Forms.ToolStripMenuItem 高级SToolStripMenuItem;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label6;
     }
 }
 
