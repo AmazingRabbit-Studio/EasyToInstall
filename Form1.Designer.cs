@@ -42,15 +42,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.AllowDrop = true;
-            this.button1.Location = new System.Drawing.Point(0, 28);
+            this.button1.Location = new System.Drawing.Point(0, 91);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(314, 304);
+            this.button1.Size = new System.Drawing.Size(314, 241);
             this.button1.TabIndex = 0;
             this.button1.Text = "点击或拖拽文件来安装";
             this.button1.UseVisualStyleBackColor = true;
@@ -138,9 +139,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(2, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(269, 12);
+            this.label4.Size = new System.Drawing.Size(281, 12);
             this.label4.TabIndex = 5;
-            this.label4.Text = "如果安装失败可以试试打开一个子系统应用再安装";
+            this.label4.Text = "如果安装失败可以试试打开着一个子系统应用再安装";
             this.label4.Visible = false;
             // 
             // label5
@@ -167,10 +168,20 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(-2, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(209, 12);
+            this.label6.Size = new System.Drawing.Size(269, 12);
             this.label6.TabIndex = 8;
-            this.label6.Text = "由ARMrAmzing制作 Github:ARMrAmzing";
+            this.label6.Text = "由ARMrAmzing和PercyDan制作 Github:ARMrAmzing";
             this.label6.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 25);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(314, 63);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "打开子系统设置";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -178,6 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 332);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -212,6 +224,7 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Button button2;
     }
 }
 

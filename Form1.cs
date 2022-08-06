@@ -60,6 +60,7 @@ namespace EasyToInstall
         private void 帮助HToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = false;
+            button2.Visible = false;
             label1.Visible = true;
             label2.Visible = true;
             label3.Visible = true;
@@ -72,6 +73,7 @@ namespace EasyToInstall
         private void 安装IToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = true;
+            button2.Visible = true;
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
@@ -84,6 +86,7 @@ namespace EasyToInstall
         private void 高级SToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = false;
+            button2.Visible = false;
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
@@ -96,6 +99,7 @@ namespace EasyToInstall
         private void 关于AToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = false;
+            button2.Visible = false;
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
@@ -103,6 +107,11 @@ namespace EasyToInstall
             label5.Visible = false;
             label6.Visible = true;
             textBox1.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"C:\Program Files\WindowsApps\MicrosoftCorporationII.WindowsSubsystemForAndroid_2205.40000.21.0_x64__8wekyb3d8bbwe\WsaSettings.exe");
         }
     }
 }
