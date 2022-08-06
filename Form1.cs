@@ -41,12 +41,29 @@ namespace EasyToInstall
 
         private void install(string file)
         {
-            String ip = textBox1.Text;
-            startProcess(@".\adb\adb.exe", "connect "+ip);
-            startProcess(@".\adb\adb.exe", "install \"" + file + "\"");
+            string ip = textBox1.Text;
+            string str = startProcess(@".\adb\adb.exe", $"connect {ip}");
+            if (str.StartsWith("already connected to"))
+            {
+                TopMostMessageBox.Show("连接成功，点击“确定”继续", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                TopMostMessageBox.Show("连接失败，请查看“帮助”页面或检查“高级”页面中的ip是否被修改或是否正确", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            str = startProcess(@".\adb\adb.exe", $@"install ""{file}""");
+            string[] split = str.Split("\r\n".ToCharArray());
+            if (split.Length > 1 && split[2] == "Success")
+            {
+                TopMostMessageBox.Show("安装成功，点击“确定”结束安装", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                TopMostMessageBox.Show("安装失败，请检查apk是否有问题或是否是其他原因", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private static void startProcess(string path, string args)
+        private static string startProcess(string path, string args)
         {
             var p = Process.Start(new ProcessStartInfo
             {
@@ -55,6 +72,8 @@ namespace EasyToInstall
                 RedirectStandardOutput = true,
                 UseShellExecute = false
             });
+            p.WaitForExit();
+            return p.StandardOutput.ReadToEnd();
         }
 
         private void 帮助HToolStripMenuItem_Click(object sender, EventArgs e)

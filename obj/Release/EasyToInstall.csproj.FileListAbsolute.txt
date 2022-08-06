@@ -1,0 +1,11 @@
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\bin\Release\EasyToInstall.exe.config
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\bin\Release\EasyToInstall.exe
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\bin\Release\EasyToInstall.pdb
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.csproj.AssemblyReference.cache
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.csproj.SuggestedBindingRedirects.cache
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.Form1.resources
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.Properties.Resources.resources
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.csproj.GenerateResource.cache
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.csproj.CoreCompileInputs.cache
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.exe
+K:\Programming\CSharp\EasyToInstall\EasyToInstall\EasyToInstall\obj\Release\EasyToInstall.pdb

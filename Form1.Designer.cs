@@ -37,12 +37,12 @@
             this.高级SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,9 +109,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(0, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 12);
+            this.label1.Size = new System.Drawing.Size(323, 36);
             this.label1.TabIndex = 2;
-            this.label1.Text = "安装前请先在“适用于 Android™ 的 Windows 子系统设";
+            this.label1.Text = "安装前请先在“适用于 Android™ 的 Windows 子系统设置”\r\n中打开“开发人员模式”并将“子系统资源”中“连续”调\r\n为“按需要”";
             this.label1.Visible = false;
             // 
             // label2
@@ -119,20 +119,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(0, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 12);
+            this.label2.Size = new System.Drawing.Size(0, 12);
             this.label2.TabIndex = 3;
-            this.label2.Text = "置”中打开“开发人员模式”并将“子系统资源”调整为";
             this.label2.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 12);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "“连续”调为“按需要”";
-            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -149,9 +138,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(-2, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 12);
+            this.label5.Size = new System.Drawing.Size(179, 12);
             this.label5.TabIndex = 6;
-            this.label5.Text = "连接IP（如无特殊需求勿动）";
+            this.label5.Text = "adb连接IP（如无特殊需求勿动）";
             this.label5.Visible = false;
             // 
             // textBox1
@@ -168,9 +157,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(-2, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(269, 12);
+            this.label6.Size = new System.Drawing.Size(161, 24);
             this.label6.TabIndex = 8;
-            this.label6.Text = "由ARMrAmzing和PercyDan制作 Github:ARMrAmzing";
+            this.label6.Text = "由ARMrAmzing和PercyDan制作\r\nGithub:ARMrAmzing PercyDan";
             this.label6.Visible = false;
             // 
             // button2
@@ -182,6 +171,15 @@
             this.button2.Text = "打开子系统设置";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(0, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Visible = false;
             // 
             // Form1
             // 
@@ -218,13 +216,13 @@
         private System.Windows.Forms.ToolStripMenuItem 关于AToolStripMenuItem;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem 高级SToolStripMenuItem;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Label label3;
     }
 }
 
