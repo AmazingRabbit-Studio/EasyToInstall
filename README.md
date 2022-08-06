@@ -3,7 +3,7 @@ An application which can make the people out of the US install apk to the Androi
 
 .NET 4.8 or the above version is needed
 
-.NET 4.8或以上版本为运行必须
+.NET 4.8或以上版本为运行必需
 
 Please check out the help page of the app before using!
 
