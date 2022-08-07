@@ -43,7 +43,7 @@ namespace EasyToInstall
         {
             string ip = textBox1.Text;
             string str = startProcess(@".\adb\adb.exe", $"connect {ip}");
-            if (str.StartsWith("already connected to"))
+            if (str.Contains("already connected to"))
             {
                 TopMostMessageBox.Show("连接成功，点击“确定”继续", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
