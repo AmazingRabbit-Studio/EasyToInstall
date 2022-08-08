@@ -10,3 +10,15 @@ Please check out the help page of the app before using!
 请在使用前查看软件的“帮助”页面
 
 Contributor: PercyDan
+
+Because of my fault, the versions are wrong
+
+由于我的疏忽，导致版本号有错误
+
+1.3.x->1.2.x
+
+1.2.x->1.1.x
+
+The versions in "Releases" have been changed to the right ones, but the ones of commits are still wrong
+
+Releases里的版本号已改正，但commit里的仍然错误
