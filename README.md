@@ -15,6 +15,10 @@ Because of my fault, the versions are wrong
 
 由于我的疏忽，导致版本号有错误
 
+So
+
+所以
+
 1.3.x->1.2.x
 
 1.2.x->1.1.x
