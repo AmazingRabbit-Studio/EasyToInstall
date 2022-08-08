@@ -9,6 +9,7 @@ namespace EasyToInstall
     {
 
         public static string path;
+        public LanguageManager languageManager = new LanguageManager(Language.CHS);
 
         public Form1()
         {
@@ -33,33 +34,42 @@ namespace EasyToInstall
 
         private void Form1_DragDrop(object sender, DragEventArgs e)
         {
-            path = ((Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
-            if (path != "")
+            foreach (string path in (Array)e.Data.GetData(DataFormats.FileDrop))
             {
-                install(path);
+                if (path != "")
+                {
+                    install(path);
+                }
             }
         }
 
         private void install(string file)
         {
             string ip = textBox1.Text;
-            var result = startProcess(@".\adb\adb.exe", $"connect {ip}");
-            if (result.output.Contains("connected to"))
+            try
             {
-                TopMostMessageBox.Show("连接成功，点击“确定”继续", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var result = startProcess(@".\adb\adb.exe", $"connect {ip}");
+                if (result.output.Contains("connected to"))
+                {
+                    TopMostMessageBox.Show(languageManager.dic[11], string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    TopMostMessageBox.Show(languageManager.dic[12] + result.output, languageManager.dic[18], MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                result = startProcess(@".\adb\adb.exe", $@"install ""{file}""");
+                if (result.exitCode == 0)
+                {
+                    TopMostMessageBox.Show(languageManager.dic[13] + file + languageManager.dic[14], string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    TopMostMessageBox.Show(languageManager.dic[15] + result.standardError + languageManager.dic[16] + result.exitCode, languageManager.dic[18] , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception e)
             {
-                TopMostMessageBox.Show($"连接失败，请查看“帮助”页面或检查“高级”页面中的ip是否被修改或是否正确\n错误：{result.output}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            result = startProcess(@".\adb\adb.exe", $@"install ""{file}""");
-            if (result.exitCode == 0)
-            {
-                TopMostMessageBox.Show("安装成功，点击“确定”结束安装", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                TopMostMessageBox.Show($"安装失败，请重试或检查apk是否有问题或是否是其他原因\n错误：{result.standardError}\n返回代码：{result.exitCode}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TopMostMessageBox.Show(languageManager.dic[17]  + e, languageManager.dic[18],MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -80,53 +90,41 @@ namespace EasyToInstall
             return (p.ExitCode, p.StandardOutput.ReadToEnd(), p.StandardError.ReadToEnd());
         }
 
-        private void 帮助HToolStripMenuItem_Click(object sender, EventArgs e)
+        private void HToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = false;
             button2.Visible = false;
             label1.Visible = true;
-            label2.Visible = true;
-            label3.Visible = true;
-            label4.Visible = true;
             label5.Visible = false;
             label6.Visible = false;
             textBox1.Visible = false;
         }
 
-        private void 安装IToolStripMenuItem_Click(object sender, EventArgs e)
+        private void IToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = true;
             button2.Visible = true;
             label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
             label5.Visible = false;
             label6.Visible = false;
             textBox1.Visible = false;
         }
 
-        private void 高级SToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = false;
             button2.Visible = false;
             label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
             label5.Visible = true;
             label6.Visible = false;
             textBox1.Visible = true;
         }
 
-        private void 关于AToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = false;
             button2.Visible = false;
             label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
             label5.Visible = false;
             label6.Visible = true;
             textBox1.Visible = false;
@@ -135,6 +133,49 @@ namespace EasyToInstall
         private void button2_Click(object sender, EventArgs e)
         {
             Process.Start(@"C:\Program Files\WindowsApps\MicrosoftCorporationII.WindowsSubsystemForAndroid_2205.40000.21.0_x64__8wekyb3d8bbwe\WsaSettings.exe");
+        }
+
+        private void CToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            languageManager = new LanguageManager(Language.CHS);
+            this.button1.Text = languageManager.dic[1];
+            this.安装IToolStripMenuItem.Text = languageManager.dic[6];
+            this.帮助HToolStripMenuItem.Text = languageManager.dic[7];
+            this.高级SToolStripMenuItem.Text = languageManager.dic[9];
+            this.label1.Text = languageManager.dic[3];
+            this.label5.Text = languageManager.dic[4];
+            this.label6.Text = languageManager.dic[5];
+            this.button2.Text = languageManager.dic[2];
+            this.语言F5ToolStripMenuItem.Text = languageManager.dic[10];
+            this.关于AToolStripMenuItem.Text = languageManager.dic[8];
+            this.Text = languageManager.dic[0];
+            this.Validate();
+        }
+
+        private void EToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            languageManager = new LanguageManager(Language.EN);
+            this.button1.Text = languageManager.dic[1];
+            this.安装IToolStripMenuItem.Text = languageManager.dic[6];
+            this.帮助HToolStripMenuItem.Text = languageManager.dic[7];
+            this.高级SToolStripMenuItem.Text = languageManager.dic[9];
+            this.label1.Text = languageManager.dic[3];
+            this.label5.Text = languageManager.dic[4];
+            this.label6.Text = languageManager.dic[5];
+            this.button2.Text = languageManager.dic[2];
+            this.语言F5ToolStripMenuItem.Text = languageManager.dic[10];
+            this.关于AToolStripMenuItem.Text = languageManager.dic[8];
+            this.Text = languageManager.dic[0];
+        }
+
+        //This method is used to debug tip windows
+        private void Debug() 
+        {
+            TopMostMessageBox.Show(languageManager.dic[11], string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            TopMostMessageBox.Show(languageManager.dic[12] + "result.output", languageManager.dic[18], MessageBoxButtons.OK, MessageBoxIcon.Error);
+            TopMostMessageBox.Show(languageManager.dic[13] + "file" + languageManager.dic[14], string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            TopMostMessageBox.Show(languageManager.dic[15] + "result.standardError" + languageManager.dic[16] + "result.exitCode", languageManager.dic[18], MessageBoxButtons.OK, MessageBoxIcon.Error);
+            TopMostMessageBox.Show(languageManager.dic[17] + "e", languageManager.dic[18], MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

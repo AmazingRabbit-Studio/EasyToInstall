@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Language.cs" />
+    <Compile Include="LanguageManager.cs" />
     <Compile Include="DialogOperate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
