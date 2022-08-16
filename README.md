@@ -1,7 +1,7 @@
 # EasyToInstall
 An application which can make the people out of the US install apk to the Android subsystem of Windows 11 more easily and quickly
 
-一个让美国以外地区的人们能更简单更快地安装APK到Windows 11地安卓子系统的软件
+一个让美国以外地区的人们能更简单更快地安装APK到Windows 11安卓子系统的软件
 
 .NET 4.8 or the above version is needed
 
