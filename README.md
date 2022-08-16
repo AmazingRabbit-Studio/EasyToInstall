@@ -30,3 +30,9 @@ So
 The versions in "Releases" have been changed to the right ones, but the ones of commits are still wrong
 
 Releases里的版本号已改正，但commit里的仍然错误
+
+# Windows10用户请注意
+
+此应用不能在Windows10上运行
+
+![img](/BugInWin10.png)
