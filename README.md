@@ -1,11 +1,11 @@
 # EasyToInstall
 An application which can make the people out of the US install apk to the Android subsystem of Windows 11 more easily and quickly
 
-一个让美国以外地区的人们能更简单更快地安装APK到Windows 11地安卓子系统的软件
+一个让美国以外地区的人们能更简单更快地安装APK到Windows 11安卓子系统的软件
 
-.NET 4.8 or the above version is needed
+.NET 6.0 or the above version is needed
 
-.NET 4.8或以上版本为运行必需
+.NET 6.0或以上版本为运行必需
 
 Please check out the help page of the app before using!
 
@@ -30,3 +30,9 @@ So
 The versions in "Releases" have been changed to the right ones, but the ones of commits are still wrong
 
 Releases里的版本号已改正，但commit里的仍然错误
+
+# Windows10用户请注意
+
+此应用不能在Windows10上运行
+
+![img](/BugInWin10.png)
