@@ -36,10 +36,10 @@ namespace EasyToInstall
             this.安装IToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.高级SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.语言F5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简体中文CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishUSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -67,8 +67,8 @@ namespace EasyToInstall
             this.安装IToolStripMenuItem,
             this.帮助HToolStripMenuItem,
             this.高级SToolStripMenuItem,
-            this.语言F5ToolStripMenuItem,
-            this.关于AToolStripMenuItem});
+            this.关于AToolStripMenuItem,
+            this.语言F5ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(437, 25);
@@ -80,7 +80,7 @@ namespace EasyToInstall
             this.安装IToolStripMenuItem.Name = "安装IToolStripMenuItem";
             this.安装IToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.安装IToolStripMenuItem.Size = new System.Drawing.Size(69, 21);
-            this.安装IToolStripMenuItem.Text = " 安装(F1)";
+            this.安装IToolStripMenuItem.Text = "安装(F1)";
             this.安装IToolStripMenuItem.Click += new System.EventHandler(this.IToolStripMenuItem_Click);
             // 
             // 帮助HToolStripMenuItem
@@ -105,9 +105,9 @@ namespace EasyToInstall
             this.简体中文CToolStripMenuItem,
             this.englishUSEToolStripMenuItem});
             this.语言F5ToolStripMenuItem.Name = "语言F5ToolStripMenuItem";
-            this.语言F5ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            //this.语言F5ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
             this.语言F5ToolStripMenuItem.Size = new System.Drawing.Size(81, 21);
-            this.语言F5ToolStripMenuItem.Text = "语言🌏(F4)";
+            this.语言F5ToolStripMenuItem.Text = "语言🌏";
             // 
             // 简体中文CToolStripMenuItem
             // 
@@ -126,9 +126,9 @@ namespace EasyToInstall
             // 关于AToolStripMenuItem
             // 
             this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.关于AToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
             this.关于AToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.关于AToolStripMenuItem.Text = "关于(F5)";
+            this.关于AToolStripMenuItem.Text = "关于(F4)";
             this.关于AToolStripMenuItem.Click += new System.EventHandler(this.AToolStripMenuItem_Click);
             // 
             // label1
@@ -217,8 +217,8 @@ namespace EasyToInstall
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ToolStripMenuItem 语言F5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于AToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 语言F5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 简体中文CToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englishUSEToolStripMenuItem;
     }
