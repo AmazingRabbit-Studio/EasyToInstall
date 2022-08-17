@@ -103,7 +103,7 @@ namespace EasyToInstall
         private void IToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button1.Visible = true;
-            button2.Visible = true;
+            button2.Visible = false;
             label1.Visible = false;
             label5.Visible = false;
             label6.Visible = false;

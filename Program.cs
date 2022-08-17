@@ -16,6 +16,7 @@ namespace EasyToInstall
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            new EnvironmentTest();
             Application.Run(new Form1());
         }
     }

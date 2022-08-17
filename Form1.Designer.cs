@@ -51,9 +51,9 @@ namespace EasyToInstall
             // button1
             // 
             this.button1.AllowDrop = true;
-            this.button1.Location = new System.Drawing.Point(0, 91);
+            this.button1.Location = new System.Drawing.Point(0, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(437, 241);
+            this.button1.Size = new System.Drawing.Size(437, 304);
             this.button1.TabIndex = 0;
             this.button1.Text = "点击或拖拽文件来安装";
             this.button1.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@ namespace EasyToInstall
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(167, 24);
             this.label6.TabIndex = 8;
-            this.label6.Text = "由ARMrAmzing和PercyDan制作\r\nGithub:ARMrAmzing & PercyDan";
+            this.label6.Text = "由ARMrAmzing和PercyDan制作\r\nGithub: ARMrAmzing & PercyDan";
             this.label6.Visible = false;
             // 
             // button2
@@ -179,6 +179,7 @@ namespace EasyToInstall
             this.button2.TabIndex = 9;
             this.button2.Text = "打开子系统设置";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1

@@ -30,7 +30,7 @@ namespace EasyToInstall
                     {15, "安装失败，请重试或检查apk是否有问题或是否是其他原因\n错误：" },
                     {16, "\n返回代码："},
                     {17, "启动adb失败\n"},
-                    {18, "错误"}
+                    {18, "错误"},
                 };
             }
             if(lang == Language.EN)
@@ -56,7 +56,7 @@ namespace EasyToInstall
                     {15, "Failed to install, please retry , check if the APK goes wrong or find out any other problem.\nError: " },
                     {16, "\nReturned code:"},
                     {17, "Failed to launch adb\n"},
-                    {18, "Error"}
+                    {18, "Error"},
                 };
 
             }
