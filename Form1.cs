@@ -176,6 +176,7 @@ namespace EasyToInstall
             TopMostMessageBox.Show(languageManager.dic[13] + "file" + languageManager.dic[14], string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
             TopMostMessageBox.Show(languageManager.dic[15] + "result.standardError" + languageManager.dic[16] + "result.exitCode", languageManager.dic[18], MessageBoxButtons.OK, MessageBoxIcon.Error);
             TopMostMessageBox.Show(languageManager.dic[17] + "e", languageManager.dic[18], MessageBoxButtons.OK, MessageBoxIcon.Error);
+            TopMostMessageBox.Show("您的操作系统不是Windows 11，可能无法使用安卓子系统\nYour operating system isn't Windows 11, so you can't perhaps use the Android Subsystem", String.Empty, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }
